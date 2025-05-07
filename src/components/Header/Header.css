@@ -40,7 +40,7 @@
     color: var(--color-primary);
   }
   
-  /* Desktop navigation */
+  /* Desktop navigation - Anpassung für mehr Elemente */
   .header-nav {
     display: none;
   }
@@ -48,9 +48,12 @@
   .nav-item {
     font-weight: 500;
     color: var(--color-gray-700);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem; /* Verringere den horizontalen Abstand */
     transition: color 0.3s ease;
-    text-decoration: none;
+    font-size: 0.9rem; /* Kleinere Schrift für mehr Elemente */
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   
   .nav-item:hover {
@@ -135,6 +138,9 @@
     font-weight: 500;
     transition: all 0.3s ease;
     text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   
   .mobile-nav-item:hover {
@@ -142,14 +148,51 @@
     color: var(--color-primary);
   }
   
-  /* Media queries */
-  @media (min-width: 768px) {
+  /* Media queries - Navigationselemente besser anpassen */
+  @media (min-width: 1024px) {
     .desktop-nav {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.25rem; /* Geringerer Abstand zwischen Elementen */
     }
     
     .mobile-menu-toggle {
       display: none;
+    }
+  }
+  
+  /* Für kleinere Desktop-Bildschirme (800-1024px) */
+  @media (min-width: 800px) and (max-width: 1023px) {
+    .desktop-nav {
+      display: flex;
+      gap: 0.125rem;
+    }
+    
+    .nav-item {
+      padding: 0.5rem 0.5rem;
+      font-size: 0.85rem;
+    }
+    
+    .mobile-menu-toggle {
+      display: none;
+    }
+  }
+  
+  /* Für Tablets */
+  @media (min-width: 768px) and (max-width: 799px) {
+    .nav-item {
+      padding: 0.5rem 0.25rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Für sehr kleine Bildschirme - verbesserte mobile Navigation */
+  @media (max-width: 480px) {
+    .mobile-nav-container {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    
+    .mobile-nav-item {
+      padding: 0.75rem 0.5rem;
     }
   }

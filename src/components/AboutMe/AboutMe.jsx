@@ -51,7 +51,7 @@ function AboutMe() {
               <p className="bio-text">
               I am a passionate Master's student specializing in Data Engineering and Analytics. 
                 With a background in IT-Product Management & Business Informatics, I'm dedicated to transforming raw data into 
-                actionable insights and building robust data pipelines. Last year I got some experience in IT-Product Management for Manufacturing
+                actionable insights and building robust data pipelines. Last year I worked as an intern in IT-Product Management for Manufacturing at Robert Bosch GmbH
                 and currently, I work as a working student in Data Engineering 
                 & Business Intelligence at Robert Bosch GmbH in Suttgart, Germany.
               </p>

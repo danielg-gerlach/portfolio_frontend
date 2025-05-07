@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import './Header.css'
+// src/components/Header/Header.jsx
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 /**
  * Header - Navigation component
@@ -15,43 +16,54 @@ import './Header.css'
  */
 function Header({ scrollPosition }) {
   // State for mobile menu toggle
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // Check if scrolled for styling
-  const isScrolled = scrollPosition > 10
+  const isScrolled = scrollPosition > 10;
 
   // Toggle mobile menu
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   // Handle smooth scroll to section
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
       // Close menu if open (mobile)
-      setIsMenuOpen(false)
+      setIsMenuOpen(false);
       
       // Scroll to the element with smooth behavior
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-      })
+      });
     }
-  }
+  };
 
   // Close menu when ESC key is pressed
   useEffect(() => {
     const handleEsc = (event) => {
       if (event.key === 'Escape') {
-        setIsMenuOpen(false)
+        setIsMenuOpen(false);
       }
-    }
+    };
     
-    window.addEventListener('keydown', handleEsc)
+    window.addEventListener('keydown', handleEsc);
     
     return () => {
-      window.removeEventListener('keydown', handleEsc)
-    }
-  }, [])
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
+
+  // Navigation items - alle Sektionen in der gewünschten Reihenfolge
+  const navItems = [
+    { id: 'about', label: 'About Me' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'github-stats', label: 'GitHub Activities' },
+    { id: 'certifications', label: 'Certifications' },
+    { id: 'blog', label: 'Blog & Articles' },
+    { id: 'resume', label: 'Resume' },
+    { id: 'contact', label: 'Contact' }
+  ];
 
   return (
     <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
@@ -65,24 +77,15 @@ function Header({ scrollPosition }) {
 
         {/* Desktop Navigation */}
         <nav className="header-nav desktop-nav">
-          <Link to="/" 
-            className="nav-item"
-            onClick={() => scrollToSection('about')}
-          >
-            About Me
-          </Link>
-          <Link to="/" 
-            className="nav-item"
-            onClick={() => scrollToSection('projects')}
-          >
-            Projects
-          </Link>
-          <Link to="/" 
-            className="nav-item"
-            onClick={() => scrollToSection('contact')}
-          >
-            Contact
-          </Link>
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="nav-item"
+            >
+              {item.label}
+            </button>
+          ))}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -101,29 +104,20 @@ function Header({ scrollPosition }) {
       {isMenuOpen && (
         <div className="mobile-nav-container">
           <nav className="mobile-nav">
-            <Link to="/" 
-              className="mobile-nav-item"
-              onClick={() => scrollToSection('about')}
-            >
-              About Me
-            </Link>
-            <Link to="/" 
-              className="mobile-nav-item"
-              onClick={() => scrollToSection('projects')}
-            >
-              Projects
-            </Link>
-            <Link to="/" 
-              className="mobile-nav-item"
-              onClick={() => scrollToSection('contact')}
-            >
-              Contact
-            </Link>
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="mobile-nav-item"
+              >
+                {item.label}
+              </button>
+            ))}
           </nav>
         </div>
       )}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
