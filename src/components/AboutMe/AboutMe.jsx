@@ -4,6 +4,12 @@ import { FaPython, FaJava, FaDocker, FaGithub } from 'react-icons/fa';
 import { SiGooglebigquery, SiSnowflake } from 'react-icons/si';
 import { DiSqllite } from 'react-icons/di';
 import { GoDatabase } from 'react-icons/go';
+import {
+    SiInfluxdb,
+    SiMongodb,
+    SiDuckdb,
+    SiPandas,
+  } from 'react-icons/si';
 
 function AboutMe() {
   // Minimales Set an Icons zum Testen
@@ -16,12 +22,20 @@ function AboutMe() {
     'Data Modeling': <GoDatabase className="skill-icon" />,
     'BigQuery': <SiGooglebigquery className="skill-icon" />, 
     'Snowflake': <SiSnowflake className="skill-icon" />,
+    'InfluxDB': <SiSnowflake className="skill-icon" />,
+    'MongoDB': <SiSnowflake className="skill-icon" />,
+    'DuckDB': <SiSnowflake className="skill-icon" />,
+    'Pandas': <SiSnowflake className="skill-icon" />,
+    'InfluxDB': <SiInfluxdb className="skill-icon" />,
+    'MongoDB': <SiMongodb className="skill-icon" />,
+    'DuckDB': <SiDuckdb className="skill-icon" />,
+    'Pandas': <SiPandas className="skill-icon" />,
   };
 
   // Skills array für einfache Verwaltung und Anzeige
   const skills = [
     { category: 'Programming', items: ['Python', 'SQL', 'Java'] },
-    { category: 'Other', items: ['Docker', 'Git', 'Data Modeling', 'BigQuery', 'Snowflake'] }
+    { category: 'Other', items: ['Docker', 'Git', 'Data Modeling', 'BigQuery', 'Snowflake', 'InfluxDB', 'MongoDB', 'DuckDB', 'Pandas'] }
   ];
 
   return (
