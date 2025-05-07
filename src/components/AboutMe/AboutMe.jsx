@@ -49,7 +49,9 @@ function AboutMe() {
             <div className="bio-section">
               <h3 className="bio-title">Biography</h3>
               <p className="bio-text">
-                Hi there! I'm a Master's student specializing in Data Engineering and Analytics. 
+              I am a passionate Master's student specializing in Data Engineering and Analytics. 
+                With a background in [Your Background], I'm dedicated to transforming raw data into 
+                actionable insights and building robust data pipelines. 
               </p>
               <p>
                 This portfolio presents some of the projects that I have completed thorughout my studies. 
