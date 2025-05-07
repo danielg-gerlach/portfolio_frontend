@@ -97,7 +97,7 @@ function BlogSection() {
                 <p className="blog-excerpt">{post.description}</p>
               </div>
               <div className="blog-footer">
-                <span className="read-more">Weiterlesen</span>
+                <span className="read-more">Keep reading</span>
                 <FaMedium className="blog-source-icon" />
               </div>
             </a>
@@ -106,12 +106,12 @@ function BlogSection() {
         
         <div className="blog-footer-link">
           <a 
-            href="https://medium.com/@yourusername" 
+            href="https://medium.com/@danielowitch97" 
             target="_blank" 
             rel="noopener noreferrer"
             className="medium-profile-link"
           >
-            <span>Alle Artikel auf Medium ansehen</span>
+            <span>Read all articles on Medium!</span>
             <svg className="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
