@@ -50,8 +50,10 @@ function AboutMe() {
               <h3 className="bio-title">Biography</h3>
               <p className="bio-text">
               I am a passionate Master's student specializing in Data Engineering and Analytics. 
-                With a background in [Your Background], I'm dedicated to transforming raw data into 
-                actionable insights and building robust data pipelines. 
+                With a background in IT-Product Management & Business Informatics, I'm dedicated to transforming raw data into 
+                actionable insights and building robust data pipelines. Last year I got some experience in IT-Product Management for Manufacturing
+                and currently, I work as a working student in Data Engineering 
+                & Business Intelligence at Robert Bosch GmbH in Suttgart, Germany.
               </p>
               <p>
                 This portfolio presents some of the projects that I have completed thorughout my studies. 

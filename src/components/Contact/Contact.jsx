@@ -56,7 +56,7 @@ function Contact() {
         <p className="contact-description">
           Feel free to reach out to me for collaboration opportunities, 
           questions about my projects, or just to connect. I'm always open to 
-          discussing new ideas and challenges in the data engineering field.
+          discussing new ideas and challenges in the data field.
         </p>
         
         {/* Contact cards */}

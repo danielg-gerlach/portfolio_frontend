@@ -1,6 +1,6 @@
 .project-card {
     background-color: var(--color-white);
-    border-radius: var(--border-radius-lg);
+    border-radius: 16px; /* Abgerundete Ecken */
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -94,7 +94,7 @@
     color: var(--color-primary);
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
-    border-radius: var(--border-radius-full);
+    border-radius: 12px; /* Abgerundete Ecken für Tags */
   }
   
   /* View details section */
@@ -147,6 +147,21 @@
     width: 1rem;
     height: 1rem;
     margin-right: 0.375rem;
+  }
+  
+  /* GitHub button */
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 8px; /* Abgerundete Ecken für Buttons */
+    transition: all 0.3s ease;
+  }
+  
+  .github-link:hover {
+    background-color: var(--color-gray-100);
   }
   
   /* Media queries */

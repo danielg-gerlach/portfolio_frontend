@@ -97,9 +97,15 @@
   
   .skill-group {
     background-color: var(--color-white);
-    border-radius: var(--border-radius-md);
+    border-radius: 16px;
     padding: 1.25rem;
     box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-group:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
   }
   
   .skill-category {
@@ -122,7 +128,12 @@
     color: var(--color-gray-800);
     font-size: 0.875rem;
     padding: 0.375rem 0.75rem;
-    border-radius: var(--border-radius-full);
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .skill-tag:hover {
+    background-color: var(--color-gray-200);
   }
   
   /* Icon Styling in Skill-Tags */
