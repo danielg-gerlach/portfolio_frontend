@@ -12,9 +12,9 @@ export const projectsData = [
       title: 'Data Pipeline Orchestration',
       description: 'Built an ETL pipeline using Python to load, process and transform a datasets into a data warehouse for analysis.',
       technologies: ['Python', 'SQL', 'MySQL', 'BigQuery'],
-      image: null, // Add your image path here
+      image: "/images2/projects/portfolio_image.png", // Add your image path here
       github: 'https://github.com/yourusername/data-pipeline',
-      demo: null,
+      demo: "",
       // Extended content for project details page
       fullDescription: [
         'This project involved building a robust ETL (Extract, Transform, Load) pipeline to handle large volumes of data from multiple sources. The goal was to create a reliable, automated system that could process data on a schedule and accommodate changes in data schema or source systems.',

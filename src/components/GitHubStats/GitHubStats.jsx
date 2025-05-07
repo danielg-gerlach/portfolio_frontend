@@ -150,7 +150,7 @@ function GitHubStats() {
                 className="profile-link"
               >
                 <FaGithub className="github-icon" />
-                <span>Mein komplettes GitHub-Profil ansehen</span>
+                <span>Visit my GitHub Profile</span>
               </a>
             </div>
           </>

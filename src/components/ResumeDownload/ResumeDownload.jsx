@@ -10,11 +10,11 @@ function ResumeDownload() {
   return (
     <section id="resume" className="resume-section">
       <div className="container">
-        <h2 className="section-title">Lebenslauf</h2>
+        <h2 className="section-title">Resume</h2>
         
         <div className="resume-container">
           <div className="resume-content">
-            <h3 className="resume-title">My Resume for everyone who's interested!</h3>
+            <h3 className="resume-title">My resume for everyone who's interested!</h3>
             <p className="resume-description">
             My resume is available online in Google Drive. It contains  information about
               my education, professional experience, technical skills and projects.
@@ -28,7 +28,7 @@ function ResumeDownload() {
               className="resume-view-btn"
             >
               <FaExternalLinkAlt className="external-icon" />
-              <span>Lebenslauf in Google Docs ansehen</span>
+              <span>View resume</span>
             </a>
           </div>
           

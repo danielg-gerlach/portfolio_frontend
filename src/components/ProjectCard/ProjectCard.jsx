@@ -22,7 +22,7 @@ function ProjectCard({ id, title, description, technologies, image, github }) {
       {/* Project content wrapped in Link for navigation */}
       <Link to={`/project/${id}`} className="project-card-link">
         {/* Project image */}
-        <div className="project-image">
+        <div className="project-image"> 
           {image ? (
             <img 
               src={image} 

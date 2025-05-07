@@ -60,7 +60,7 @@ function Header({ scrollPosition }) {
     { id: 'projects', label: 'Projects' },
     { id: 'github-stats', label: 'GitHub Activities' },
     { id: 'certifications', label: 'Certifications' },
-    { id: 'blog', label: 'Blog & Articles' },
+    { id: 'blog', label: 'Blogs & Articles' },
     { id: 'resume', label: 'Resume' },
     { id: 'contact', label: 'Contact' }
   ];

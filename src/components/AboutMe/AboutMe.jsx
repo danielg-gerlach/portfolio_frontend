@@ -61,7 +61,7 @@ function AboutMe() {
           
           <div className="about-details">
             <div className="bio-section">
-              <h3 className="bio-title">Biography</h3>
+              <h3 className="bio-title">About Me</h3>
               <p className="bio-text">
               I am a passionate Master's student specializing in Data Engineering and Analytics. 
                 With a background in IT-Product Management & Business Informatics, I'm dedicated to transforming raw data into 

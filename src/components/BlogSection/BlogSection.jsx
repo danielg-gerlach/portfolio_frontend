@@ -75,7 +75,7 @@ function BlogSection() {
         <h2 className="section-title">Blogs & Articles</h2>
         
         <p className="blog-description">
-        Here you can find my latest articles and tutorials on data engineering, analytics and related topics.
+        Here you can find my latest articles on data engineering, analytics and related data topics.
         I regularly share my insights, best practices and solutions to common challenges.
         </p>
         
