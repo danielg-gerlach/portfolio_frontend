@@ -12,10 +12,13 @@
     line-height: 1.6;
   }
   
+  /* Verbesserte Grid-Anordnung mit automatischer Zentrierung */
   .certifications-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
   }
   
   .certification-card {
@@ -150,10 +153,12 @@
     font-size: 0.75rem;
   }
   
-  /* Responsive Design */
+  /* Responsive Design mit automatischer Zentrierung für 2 Elemente */
   @media (min-width: 640px) {
     .certifications-grid {
       grid-template-columns: repeat(2, 1fr);
+      max-width: 42rem; /* Begrenzt die Breite für 2 Spalten */
+      margin: 0 auto;
     }
     
     .skills-list {
@@ -163,6 +168,8 @@
   
   @media (min-width: 1024px) {
     .certifications-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+      justify-content: center;
+      max-width: 100%;
     }
   }

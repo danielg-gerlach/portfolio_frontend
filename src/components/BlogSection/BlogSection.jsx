@@ -3,16 +3,19 @@ import React, { useState, useEffect } from 'react';
 import { FaMedium } from 'react-icons/fa';
 import './BlogSection.css';
 
+import MediumImage1 from "../../assets/images2/medium/DWDL.png";
+import MediumImage2 from "../../assets/images2/medium/GDB.png";
+
 function BlogSection() {
   // Statische Blog-Posts (falls Medium-API nicht verwendet wird)
   const [blogPosts, setBlogPosts] = useState([
     {
       id: 1,
-      title: "Eine Einführung in Data Engineering mit Python",
-      description: "Entdecke die grundlegenden Konzepte und Tools für Data Engineering mit Python.",
-      date: "15. März 2024",
-      url: "https://medium.com/@yourusername/intro-to-data-engineering-with-python",
-      imageUrl: "/assets/images/blog/data-engineering-python.jpg"
+      title: "From Data Warehouse to Data Lakehouse",
+      description: "Understanding the Evolution of Data Architecture and When to Use Each",
+      date: "08.05.2025",
+      url: "https://medium.com/@danielowitch97/from-data-warehouse-to-data-lakehouse-8b93eee02497",
+      imageUrl: MediumImage1
     },
     {
       id: 2,
@@ -20,54 +23,21 @@ function BlogSection() {
       description: "Ein Vergleich der beiden Data Processing-Paradigmen und wann man welches verwenden sollte.",
       date: "2. Februar 2024",
       url: "https://medium.com/@yourusername/etl-vs-elt",
-      imageUrl: "/assets/images/blog/etl-vs-elt.jpg"
-    },
-    {
-      id: 3,
-      title: "Datenmodellierung Best Practices für Data Warehouses",
-      description: "Lernen Sie, wie Sie effektive Datenmodelle für Ihre Data Warehouse-Implementierungen erstellen.",
-      date: "5. Januar 2024",
-      url: "https://medium.com/@yourusername/data-modeling-best-practices",
-      imageUrl: "/assets/images/blog/data-modeling.jpg"
+      imageUrl: MediumImage2
     }
   ]);
   
+  // Bestimme die passende Grid-Klasse basierend auf der Anzahl der Blog-Posts
+  const getBlogGridClass = () => {
+    const count = blogPosts.length;
+    if (count <= 2) {
+      return "blog-grid blog-grid-centered";
+    }
+    return "blog-grid";
+  };
+
   // Alternativ: Medium-API für dynamische Posts
-  // Ich kommentiere den Code aus, da er eine API-Integration benötigt
-  /*
-  useEffect(() => {
-    // Funktion zum Abrufen der Medium-Artikel
-    const fetchMediumPosts = async () => {
-      try {
-        // Medium bietet kein offizielles API, aber RSS-Feed kann verwendet werden
-        // Du musst einen Proxy-Server verwenden oder eine Third-Party-API
-        const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@yourusername');
-        const data = await response.json();
-        
-        if (data.status === 'ok') {
-          const formattedPosts = data.items.map((item, index) => ({
-            id: index + 1,
-            title: item.title,
-            description: item.description.replace(/<[^>]*>/g, '').substring(0, 120) + '...',
-            date: new Date(item.pubDate).toLocaleDateString('de-DE', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            }),
-            url: item.link,
-            imageUrl: item.thumbnail || '/assets/images/blog/default.jpg'
-          }));
-          
-          setBlogPosts(formattedPosts);
-        }
-      } catch (error) {
-        console.error('Error fetching Medium posts:', error);
-      }
-    };
-    
-    fetchMediumPosts();
-  }, []);
-  */
+  // Auskommentierter Code für API-Integration wurde hier entfernt
 
   return (
     <section id="blog" className="blog-section">
@@ -75,11 +45,10 @@ function BlogSection() {
         <h2 className="section-title">Blogs & Articles</h2>
         
         <p className="blog-description">
-        Here you can find my latest articles on data engineering, analytics and related data topics.
-        I regularly share my insights, best practices and solutions to common challenges.
+          Here you can find my latest articles on data engineering, analytics and related data topics.
         </p>
         
-        <div className="blog-grid">
+        <div className={getBlogGridClass()}>
           {blogPosts.map(post => (
             <a href={post.url} target="_blank" rel="noopener noreferrer" key={post.id} className="blog-card">
               <div className="blog-image">

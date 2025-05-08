@@ -6,14 +6,19 @@
  * extended details for the project detail page.
  */
 
+import portfolioImageETL from '../../assets/images2/projects/portfolio_image.png';
+import portfolioImageEDA from '../../assets/images2/projects/EDA.png';
+import portfolioImageRDB from '../../assets/images2/projects/rdb-design.png';
+import portfolioImageDA from '../../assets/images2/projects/data-arch.png';
+
 export const projectsData = [
     {
       id: 1,
-      title: 'Data Pipeline Orchestration',
-      description: 'Built an ETL pipeline using Python to load, process and transform a datasets into a data warehouse for analysis.',
-      technologies: ['Python', 'SQL', 'MySQL', 'BigQuery'],
-      image: "/images2/projects/portfolio_image.png", // Add your image path here
-      github: 'https://github.com/yourusername/data-pipeline',
+      title: 'Exploratory Analysis & Visualization of Manufacturing Data',
+      description: 'Analyzed a dataset that tracks the number of defects over a 10-day period.',
+      technologies: ['Python', 'Pandas', 'Seaborn', "Matplotlib"],
+      image: portfolioImageEDA,
+      github: 'https://github.com/danielg-gerlach/EDA_Manufacturing',
       demo: "",
       // Extended content for project details page
       fullDescription: [
@@ -44,10 +49,10 @@ export const projectsData = [
     },
     {
       id: 2,
-      title: 'Predictive Analytics Dashboard',
+      title: 'End-to-End Data Pipeline, Warehousing & Analysis',
       description: 'Developed an interactive dashboard for visualizing machine learning predictions and key performance metrics.',
-      technologies: ['Python', 'React', 'Scikit-learn', 'Plotly', 'FastAPI'],
-      image: null, // Add your image path here
+      technologies: ['Python', 'SQL', 'BigQuery', 'MySQL', 'Looker Studio'],
+      image: portfolioImageETL, 
       github: 'https://github.com/yourusername/analytics-dashboard',
       demo: 'https://yourdemo.com',
       // Extended content for project details page
@@ -79,11 +84,11 @@ export const projectsData = [
     },
     {
       id: 3,
-      title: 'Data Transformation Framework',
-      description: 'Created a modular dbt framework for transforming raw data into business-ready datasets with full testing and documentation.',
-      technologies: ['dbt', 'SQL', 'Snowflake', 'Python', 'CI/CD'],
-      image: null, // Add your image path here
-      github: 'https://github.com/yourusername/dbt-framework',
+      title: 'Relational Database Design',
+      description: 'Created a relational database for an energy supplier operations in MySQL.',
+      technologies: ['SQL', 'MySQL'],
+      image: portfolioImageRDB, 
+      github: 'https://github.com/danielg-gerlach/energy_supplier_db',
       demo: null,
       // Extended content for project details page
       fullDescription: [
@@ -114,11 +119,11 @@ export const projectsData = [
     },
     {
       id: 4,
-      title: 'Real-time Streaming Analytics',
-      description: 'Implemented a real-time analytics system using streaming technologies to process and visualize data in near real-time.',
-      technologies: ['Kafka', 'Spark Streaming', 'Elasticsearch', 'Kibana', 'Java'],
-      image: null, // Add your image path here
-      github: 'https://github.com/yourusername/streaming-analytics',
+      title: 'Data Architecture Design',
+      description: 'Designed a manufacturing-focused data architecture.',
+      technologies: ['Data Architecture Design'],
+      image: portfolioImageDA, // Add your image path here
+      github: 'https://github.com/danielg-gerlach/Data_Architecture',
       demo: null,
       // Extended content for project details page
       fullDescription: [

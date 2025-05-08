@@ -12,11 +12,20 @@
     line-height: 1.6;
   }
   
+  /* Verbesserte Grid-Anordnung mit automatischer Zentrierung */
   .blog-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Spezielle Klasse für zentriertes Layout bei wenigen Einträgen */
+  .blog-grid-centered {
+    justify-items: center;
   }
   
   .blog-card {
@@ -29,6 +38,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: var(--color-gray-900);
+    width: 100%; /* Wichtig für die korrekte Breite im Grid */
   }
   
   .blog-card:hover {
@@ -137,14 +147,20 @@
     transform: translateX(4px);
   }
   
+  /* Responsive Design mit automatischer Zentrierung */
   @media (min-width: 640px) {
     .blog-grid {
       grid-template-columns: repeat(2, 1fr);
+      max-width: 42rem; /* Begrenzt die Breite für 2 Spalten */
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   
   @media (min-width: 1024px) {
     .blog-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+      justify-content: center;
+      max-width: 100%;
     }
   }

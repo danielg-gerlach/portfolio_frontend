@@ -3,7 +3,7 @@ import React from 'react';
 import { FaCheck, FaExternalLinkAlt } from 'react-icons/fa';
 import './Certifications.css';
 import CourseraImage from "../../assets/images2/certifications/coursera.png";
-import DataCampImage from "../../assets/images2/certifications/logo.png"
+import DataCampImage from "../../assets/images2/certifications/logo.png";
 
 function Certifications() {
   // Zertifikatsdaten
@@ -13,8 +13,7 @@ function Certifications() {
       name: "Data Engineer",
       issuer: "DataCamp",
       date: "January 2024",
-      expiryDate: "April 2026",
-      expiryDate: null,
+      expiryDate: null, // Doppeltes Feld entfernt
       credentialId: "#434,995",
       verificationUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/track/65dd19f5f70bdb960136a32de88b0817694909dc",
       skills: ["Data Engineering", "Python", "SQL", "Data Pipelines", "Data Warehousing"],
@@ -30,19 +29,18 @@ function Certifications() {
       verificationUrl: "https://coursera.org/share/6aa1d04db46bc341e8106735ac5bed65",
       skills: ["DevOps", "Software Engineering", "Microservices", "Git", "Shell Scripting"],
       logo: CourseraImage
-    },
-    {
-      id: 3,
-      name: "Databricks Certified Data Engineer Professional",
-      issuer: "Databricks",
-      date: "November 2023",
-      expiryDate: null, // Kein Ablaufdatum
-      credentialId: "IJKL9012",
-      verificationUrl: "https://credentials.databricks.com/IJKL9012",
-      skills: ["Spark", "Delta Lake", "Data Pipelines", "Databricks Workflows"],
-      logo: "/assets/images/certifications/databricks.png"
     }
+    // Drittes Zertifikat auskommentiert oder entfernt für dein Szenario mit nur 2 Zertifikaten
   ];
+
+  // Bestimme die passende Klasse basierend auf der Anzahl der Zertifikate
+  const getGridClass = () => {
+    const count = certifications.length;
+    if (count <= 2) {
+      return "certifications-grid certifications-grid-centered";
+    }
+    return "certifications-grid";
+  };
 
   return (
     <section id="certifications" className="certifications-section">
@@ -50,12 +48,10 @@ function Certifications() {
         <h2 className="section-title">Certifications</h2>
         
         <p className="certifications-description">
-        My expertise is confirmed by various industry certifications. 
-          These qualifications demonstrate my commitment to continuous learning and professional 
-          professional development in the field of data engineering.
+          During my studies, I've also gained some experience through certifications & online courses. 
         </p>
         
-        <div className="certifications-grid">
+        <div className={getGridClass()}>
           {certifications.map(cert => (
             <div key={cert.id} className="certification-card">
               <div className="certification-header">

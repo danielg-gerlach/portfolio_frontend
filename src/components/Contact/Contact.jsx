@@ -37,7 +37,7 @@ function Contact() {
     {
       id: 'linkedin',
       label: 'LinkedIn',
-      value: 'linkedin.com/in/anielg-gerlach',
+      value: 'linkedin.com/in/danielg-gerlach',
       link: 'www.linkedin.com/in/danielg-gerlach',
       icon: (
         <svg className="contact-icon" fill="currentColor" viewBox="0 0 24 24">

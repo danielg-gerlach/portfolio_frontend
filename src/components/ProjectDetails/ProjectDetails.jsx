@@ -1,49 +1,64 @@
-import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import './ProjectDetails.css'
 import { projectsData } from '../Projects/projectsData'
 
 /**
- * ProjectDetails - Detailed page for a single project
+ * ProjectDetails - Modulare Karten-basierte Ansicht für Projektdetails
  * 
- * This component displays detailed information about a specific project,
- * including extended description, technologies, challenges, and solutions.
+ * Modernes, minimalistisches Design mit Karten für jede Sektion, 
+ * optimierten Abständen und sanfter Hover-Animation.
  * 
- * @returns {JSX.Element} The project details page
+ * @returns {JSX.Element} Die Projektdetailseite
  */
 function ProjectDetails() {
-  // Get the id parameter from the URL
+  // URL-Parameter für Projekt-ID
   const { id } = useParams()
   
-  // State to store the current project
+  // State für das aktuelle Projekt
   const [project, setProject] = useState(null)
+
+  // Navigate Hook für programmgesteuerte Navigation
+  const navigate = useNavigate();
   
-  // Load project data when component mounts or id changes
+  // Lade Projektdaten beim Mounten oder ID-Änderung
   useEffect(() => {
-    // Find the project with the matching id
+    // Suche das Projekt mit der passenden ID
     const foundProject = projectsData.find(p => p.id === parseInt(id))
     
     if (foundProject) {
-      // Set document title
+      // Setze Dokumenttitel
       document.title = `${foundProject.title} | Portfolio`
       
-      // Set the project in state
+      // Setze Projekt im State
       setProject(foundProject)
       
-      // Scroll to top when loading new project
+      // Scrolle zum Seitenanfang
       window.scrollTo(0, 0)
     }
   }, [id])
 
-  // If project is not found or still loading
+  // Funktion für Navigation zurück zur Projektübersicht
+  const navigateToProjects = () => {
+    navigate('/');
+    // Timeout um sicherzustellen, dass Navigation abgeschlossen ist
+    setTimeout(() => {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  // Falls Projekt nicht gefunden oder noch lädt
   if (!project) {
     return (
       <div className="container project-not-found">
         <h2>Project Not Found</h2>
         <p>The project you're looking for doesn't exist.</p>
-        <Link to="/" className="back-link">
-          <span>Back to Home</span>
-        </Link>
+        <button onClick={navigateToProjects} className="back-link">
+          <span>Back to Projects</span>
+        </button>
       </div>
     )
   }
@@ -51,15 +66,18 @@ function ProjectDetails() {
   return (
     <div className="project-details-container">
       <div className="container">
-        {/* Back link */}
-        <Link to="/" className="back-link">
+        {/* Back Link als Button */}
+        <button 
+          onClick={navigateToProjects} 
+          className="back-link"
+        >
           <svg className="back-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
           </svg>
           <span>Back to Projects</span>
-        </Link>
+        </button>
         
-        {/* Project header */}
+        {/* Projektkopf */}
         <div className="project-header">
           <h1 className="project-title">{project.title}</h1>
           
@@ -81,7 +99,7 @@ function ProjectDetails() {
           </div>
         </div>
         
-        {/* Project image */}
+        {/* Projektbild */}
         <div className="project-image-container">
           {project.image ? (
             <img 
@@ -96,72 +114,82 @@ function ProjectDetails() {
           )}
         </div>
         
-        {/* Project content */}
-        <div className="project-content-wrapper">
-          {/* Overview */}
-          <section className="project-section">
-            <h2 className="section-heading">Overview</h2>
-            <p className="project-description">{project.description}</p>
-            
-            {/* Only show full description if it exists */}
-            {project.fullDescription && (
-              <div className="full-description">
-                {project.fullDescription.map((paragraph, index) => (
-                  <p key={index} className="description-paragraph">{paragraph}</p>
+        {/* Neues Karten-Layout für Projektinhalt */}
+        <div className="project-content-cards">
+          {/* Übersicht-Karte */}
+          <div className="project-card card-overview">
+            <div className="card-content">
+              <h2 className="card-heading">Overview</h2>
+              <p className="project-description">{project.description}</p>
+              
+              {/* Vollständige Beschreibung, falls vorhanden */}
+              {project.fullDescription && (
+                <div className="full-description">
+                  {project.fullDescription.map((paragraph, index) => (
+                    <p key={index} className="description-paragraph">{paragraph}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+          
+          {/* Technologien-Karte */}
+          <div className="project-card">
+            <div className="card-content">
+              <h2 className="card-heading">Technologies Used</h2>
+              <div className="tech-grid">
+                {project.technologies.map((tech, index) => (
+                  <div key={index} className="tech-item">
+                    <span className="tech-name">{tech}</span>
+                  </div>
                 ))}
               </div>
-            )}
-          </section>
-          
-          {/* Technologies */}
-          <section className="project-section">
-            <h2 className="section-heading">Technologies Used</h2>
-            <div className="tech-grid">
-              {project.technologies.map((tech, index) => (
-                <div key={index} className="tech-item">
-                  <span className="tech-name">{tech}</span>
-                </div>
-              ))}
             </div>
-          </section>
+          </div>
           
-          {/* Features */}
+          {/* Features-Karte */}
           {project.features && (
-            <section className="project-section">
-              <h2 className="section-heading">Key Features</h2>
-              <ul className="features-list">
-                {project.features.map((feature, index) => (
-                  <li key={index} className="feature-item">{feature}</li>
-                ))}
-              </ul>
-            </section>
+            <div className="project-card">
+              <div className="card-content">
+                <h2 className="card-heading">Key Features</h2>
+                <ul className="features-list">
+                  {project.features.map((feature, index) => (
+                    <li key={index} className="feature-item">{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           )}
           
-          {/* Challenges */}
+          {/* Herausforderungen-Karte */}
           {project.challenges && (
-            <section className="project-section">
-              <h2 className="section-heading">Challenges & Solutions</h2>
-              {project.challenges.map((challenge, index) => (
-                <div key={index} className="challenge-item">
-                  <h3 className="challenge-title">{challenge.title}</h3>
-                  <p className="challenge-description">{challenge.description}</p>
-                  {challenge.solution && (
-                    <div className="solution">
-                      <h4 className="solution-title">Solution:</h4>
-                      <p className="solution-description">{challenge.solution}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </section>
+            <div className="project-card">
+              <div className="card-content">
+                <h2 className="card-heading">Challenges & Solutions</h2>
+                {project.challenges.map((challenge, index) => (
+                  <div key={index} className="challenge-item">
+                    <h3 className="challenge-title">{challenge.title}</h3>
+                    <p className="challenge-description">{challenge.description}</p>
+                    {challenge.solution && (
+                      <div className="solution">
+                        <h4 className="solution-title">Solution:</h4>
+                        <p className="solution-description">{challenge.solution}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
           
-          {/* Outcomes */}
+          {/* Outcomes-Karte */}
           {project.outcomes && (
-            <section className="project-section">
-              <h2 className="section-heading">Outcomes & Learnings</h2>
-              <p className="outcomes-text">{project.outcomes}</p>
-            </section>
+            <div className="project-card">
+              <div className="card-content">
+                <h2 className="card-heading">Outcomes & Learnings</h2>
+                <p className="outcomes-text">{project.outcomes}</p>
+              </div>
+            </div>
           )}
         </div>
       </div>

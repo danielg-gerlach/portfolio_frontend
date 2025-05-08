@@ -38,21 +38,6 @@ function Projects() {
             />
           ))}
         </div>
-        
-        {/* Additional projects link */}
-        <div className="more-projects">
-          <a 
-            href="https://github.com/yourusername" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="more-link"
-          >
-            <span>View more projects on GitHub</span>
-            <svg className="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   )
