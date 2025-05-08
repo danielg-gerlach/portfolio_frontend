@@ -2,6 +2,8 @@
 import React from 'react';
 import { FaCheck, FaExternalLinkAlt } from 'react-icons/fa';
 import './Certifications.css';
+import CourseraImage from "../../assets/images2/certifications/coursera.png";
+import DataCampImage from "../../assets/images2/certifications/logo.png"
 
 function Certifications() {
   // Zertifikatsdaten
@@ -16,7 +18,7 @@ function Certifications() {
       credentialId: "#434,995",
       verificationUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/track/65dd19f5f70bdb960136a32de88b0817694909dc",
       skills: ["Data Engineering", "Python", "SQL", "Data Pipelines", "Data Warehousing"],
-      logo: "/public/images2/certifications/logo.png"
+      logo: DataCampImage
     },
     {
       id: 2,
@@ -27,7 +29,7 @@ function Certifications() {
       credentialId: "EFGH5678",
       verificationUrl: "https://coursera.org/share/6aa1d04db46bc341e8106735ac5bed65",
       skills: ["DevOps", "Software Engineering", "Microservices", "Git", "Shell Scripting"],
-      logo: "/public/images2/certifications/coursera.png"
+      logo: CourseraImage
     },
     {
       id: 3,

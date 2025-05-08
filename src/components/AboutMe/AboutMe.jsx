@@ -1,4 +1,4 @@
-// AboutMe.jsx - vereinfachte Version
+// AboutMe.jsx
 import './AboutMe.css';
 import { FaPython, FaJava, FaDocker, FaGithub } from 'react-icons/fa';
 import { SiGooglebigquery, SiSnowflake } from 'react-icons/si';
@@ -10,6 +10,7 @@ import {
     SiDuckdb,
     SiPandas,
   } from 'react-icons/si';
+import ProfilePic from "../../assets/images/Bild_Daniel_Gerlach_komp.jpg";
 
 function AboutMe() {
   // Minimales Set an Icons zum Testen
@@ -22,10 +23,6 @@ function AboutMe() {
     'Data Modeling': <GoDatabase className="skill-icon" />,
     'BigQuery': <SiGooglebigquery className="skill-icon" />, 
     'Snowflake': <SiSnowflake className="skill-icon" />,
-    'InfluxDB': <SiSnowflake className="skill-icon" />,
-    'MongoDB': <SiSnowflake className="skill-icon" />,
-    'DuckDB': <SiSnowflake className="skill-icon" />,
-    'Pandas': <SiSnowflake className="skill-icon" />,
     'InfluxDB': <SiInfluxdb className="skill-icon" />,
     'MongoDB': <SiMongodb className="skill-icon" />,
     'DuckDB': <SiDuckdb className="skill-icon" />,
@@ -46,10 +43,13 @@ function AboutMe() {
         <div className="about-content">
           <div className="about-profile">
             <div className="profile-image">
-                <img src="images/Bild_Daniel_Gerlach_komp.jpg" alt="Daniel Gerlach" className="profile-image"/>
-              <div className="profile-placeholder">
-                Profile Image
-              </div>
+              {ProfilePic ? (
+                <img src={ProfilePic} alt="Daniel Gerlach" className="profile-img" />
+              ) : (
+                <div className="profile-placeholder">
+                  Profile Image
+                </div>
+              )}
             </div>
             
             <div className="profile-info">
@@ -63,13 +63,13 @@ function AboutMe() {
             <div className="bio-section">
               <h3 className="bio-title">About Me</h3>
               <p className="bio-text">
-              I am a passionate Master's student specializing in Data Engineering and Analytics. 
+                I am a passionate Master's student specializing in Data Engineering and Analytics. 
                 With a background in IT-Product Management & Business Informatics, I'm dedicated to transforming raw data into 
                 actionable insights and building robust data pipelines. Last year I worked as an intern in IT-Product Management for Manufacturing at Robert Bosch GmbH
                 and currently, I work as a working student in Data Engineering 
                 & Business Intelligence at Robert Bosch GmbH in Suttgart, Germany.
               </p>
-              <p>
+              <p className="bio-text">
                 This portfolio presents some of the projects that I have completed thorughout my studies. 
                 Enjoy!
               </p>
