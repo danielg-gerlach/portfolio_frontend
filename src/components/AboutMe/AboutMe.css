@@ -81,12 +81,15 @@
     line-height: 1.6;
   }
   
-  /* Skills styling */
+  /* Skills styling - erhöhte Spezifität und !important für garantierte Anwendung */
+  .about-section .about-content .about-details .skills-section h3.skills-title,
   .skills-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--color-gray-800);
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+    color: var(--color-gray-800) !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
   }
   
   .skills-grid {
