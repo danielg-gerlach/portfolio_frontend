@@ -1,10 +1,8 @@
 // src/components/HomePage/HomePage.jsx
 import AboutMe from '../AboutMe/AboutMe'
 import Projects from '../Projects/Projects'
-import Contact from '../Contact/Contact'
 import ResumeDownload from '../ResumeDownload/ResumeDownload'
 import BlogSection from '../BlogSection/BlogSection'
-import GitHubStats from '../GitHubStats/GitHubStats'
 import Certifications from '../Certifications/Certifications'
 import './HomePage.css'
 
@@ -21,11 +19,9 @@ function HomePage() {
     <div className="homepage">
       <AboutMe />
       <Projects />
-      <GitHubStats />
       <Certifications />
       <BlogSection />
       <ResumeDownload />
-      <Contact />
     </div>
   )
 }
