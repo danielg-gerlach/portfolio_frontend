@@ -22,8 +22,8 @@ export const projectsData = [
       demo: "",
       // Extended content for project details page
       fullDescription: [
-        'This project involved building a robust ETL (Extract, Transform, Load) pipeline to handle large volumes of data from multiple sources. The goal was to create a reliable, automated system that could process data on a schedule and accommodate changes in data schema or source systems.',
-        'The pipeline extracts data from various sources including APIs, databases, and file systems, transforms it using custom Python functions, and loads it into a PostgreSQL data warehouse for analytics and reporting purposes. The entire system is containerized with Docker for consistency across development and production environments.'
+        'Data analysis plays a critical role in manufacturing by providing insights that drive smarter decision-making. It helps businesses optimize resource allocation, improve processes, and maintain quality control. By analyzing data from different stages of production, manufacturers can predict equipment failures, streamline supply chains, and minimize downtime—resulting in cost savings and higher efficiency.',
+        'This project focuses on an exploratory data analysis (EDA) of a manufacturing dataset that tracks the number of defects over a 10-day period. The goal was to uncover insights that could support process improvement and quality assurance. I used Python along with libraries like Pandas for data manipulation and Matplotlib and Seaborn for visualizations. This project represents my starting point in data analytics, and there’s plenty more on the way!'
       ],
       features: [
         'Scheduled data extraction from multiple sources',
@@ -92,8 +92,9 @@ export const projectsData = [
       demo: null,
       // Extended content for project details page
       fullDescription: [
-        'This project involved building a comprehensive data transformation framework using dbt (data build tool) to convert raw data into analytics-ready tables with consistent business logic. The framework standardizes transformation processes across the organization and enforces best practices in data modeling.',
-        'The solution includes modular SQL transformations, automated testing of data quality and integrity, and thorough documentation of data lineage and business definitions. The entire framework is deployed through a CI/CD pipeline that ensures changes are tested before being applied to production.'
+        'In the energy sector, managing data effectively is critical for delivering seamless operations and exceptional customer satisfaction. Relational databases offer a structured and reliable way to organize key areas such as customer management, energy usage tracking, billing, and payments. They provide the foundation for accuracy, scalability, and the ability to adapt to changing business requirements in a dynamic industry.',
+        'For this project, I designed and implemented a relational database using operational data modeling, specifically tailored to an energy supplier’s needs. The database focuses on streamlining the management of customer accounts, contracts, and meter readings, ensuring data consistency and operational efficiency. By addressing the core challenges of energy data management, this project demonstrates how a well-structured database can optimize workflows and enable better decision-making.',
+        'This implementation not only showcases the power of relational databases in solving real-world business problems but also highlights technical skills in data modeling and SQL development. It’s a great example of how databases can deliver value and drive success in the energy industry.'
       ],
       features: [
         'Modular transformation models organized by business domain',
@@ -127,8 +128,8 @@ export const projectsData = [
       demo: null,
       // Extended content for project details page
       fullDescription: [
-        'This project delivers real-time analytics for high-volume event streams, enabling immediate insights and alerts based on incoming data. The system processes millions of events per minute from web applications, IoT devices, and business systems.',
-        'The architecture uses Apache Kafka for message queuing, Spark Streaming for stateful processing and aggregations, and Elasticsearch/Kibana for storage and visualization. Custom Java microservices handle specific domain logic and integrations with external systems.'
+        'In manufacturing, data is the backbone of informed decision-making. This project focuses on building a data warehouse architecture that integrates real-time IoT sensor data, production metrics, supply chain information, and quality assurance data. The goal was to create a centralized platform that enables stakeholders to optimize operations, enhance quality, and improve supply chain agility.',
+        'This project reflects my passion for data engineering and architecture. It showcases my approach to designing data solutions for the complex landscapes of modern production environments, combining technical expertise with a deep understanding of manufacturing needs.'
       ],
       features: [
         'Sub-second processing of streaming events',

@@ -13,7 +13,7 @@ function BlogSection() {
       id: 1,
       title: "From Data Warehouse to Data Lakehouse",
       description: "Understanding the Evolution of Data Architecture and When to Use Each",
-      date: "08.05.2025",
+      date: "08. May 2025",
       url: "https://medium.com/@danielowitch97/from-data-warehouse-to-data-lakehouse-8b93eee02497",
       imageUrl: MediumImage1
     },

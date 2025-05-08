@@ -63,7 +63,7 @@ function AboutMe() {
             <div className="bio-section">
               <h3 className="bio-title">About Me</h3>
               <p className="bio-text">
-              I’m currently pursuing my Master’s in Data Engineering and Analytics, building on a background in IT Product Management and Business Informatics.
+              I’m currently pursuing my Master’s in Business Informatics, specializing in Data Engineering and Analytics, building on a background in IT Product Management and Business Informatics.
               I enjoy working at the intersection of data, systems, and real-world impact — whether it’s building data pipelines, automating workflows, or turning raw data into something meaningful. 
               Over the past year, I’ve gained hands-on experience at Robert Bosch GmbH, first as an intern in IT Product Management for Manufacturing, where I also wrote my Bachelor’s thesis on Generative AI in manufacturing. 
               I’m now continuing there as a working student in Data Engineering & Business Intelligence in Stuttgart.
