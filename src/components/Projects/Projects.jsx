@@ -20,8 +20,8 @@ function Projects() {
         {/* Project description */}
         <p className="projects-description">
           Here are some of the data engineering and analytics projects I've worked on. 
-          These showcase my skills in data pipeline development, analytics, and visualization.
-          Click on any project to see more details.
+          These showcase my skills in data pipeline development, analytics, visualization & data warehousing.
+          Click on any project to see more details!
         </p>
         
         {/* Projects grid */}

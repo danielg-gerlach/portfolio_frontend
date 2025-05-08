@@ -63,15 +63,12 @@ function AboutMe() {
             <div className="bio-section">
               <h3 className="bio-title">About Me</h3>
               <p className="bio-text">
-                I am a Master's student specializing in Data Engineering and Analytics. 
-                With a background in IT-Product Management & Business Informatics, I'm dedicated to transforming raw data into 
-                actionable insights and building robust data pipelines. Last year I worked as an intern in IT-Product Management for Manufacturing at Robert Bosch GmbH
-                and currently, I work as a working student in Data Engineering 
-                & Business Intelligence at Robert Bosch GmbH in Suttgart, Germany.
-              </p>
-              <p className="bio-text">
-                This portfolio presents some of the projects that I have completed thorughout my studies. 
-                Enjoy!
+              I’m currently pursuing my Master’s in Data Engineering and Analytics, building on a background in IT Product Management and Business Informatics.
+              I enjoy working at the intersection of data, systems, and real-world impact — whether it’s building data pipelines, automating workflows, or turning raw data into something meaningful. 
+              Over the past year, I’ve gained hands-on experience at Robert Bosch GmbH, first as an intern in IT Product Management for Manufacturing, where I also wrote my Bachelor’s thesis on Generative AI in manufacturing. 
+              I’m now continuing there as a working student in Data Engineering & Business Intelligence in Stuttgart.
+              This portfolio highlights some of the projects I’ve worked on during my studies.
+              Feel free to explore — Enjoy!
               </p>
             </div>
             
