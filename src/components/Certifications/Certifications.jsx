@@ -16,7 +16,7 @@ function Certifications() {
       expiryDate: null, // Doppeltes Feld entfernt
       credentialId: "#434,995",
       verificationUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/track/65dd19f5f70bdb960136a32de88b0817694909dc",
-      skills: ["Data Engineering", "Python", "SQL", "Data Pipelines", "Data Warehousing"],
+      skills: ["Python", "SQL", "ETL/ELT Data Pipelines", "Data Warehousing"],
       logo: DataCampImage
     },
     {
@@ -27,7 +27,7 @@ function Certifications() {
       expiryDate: null,
       credentialId: "EFGH5678",
       verificationUrl: "https://coursera.org/share/6aa1d04db46bc341e8106735ac5bed65",
-      skills: ["DevOps", "Software Engineering", "Microservices", "Git", "Shell Scripting"],
+      skills: ["Microservices", "Git", "Shell Scripting", "Test-Driven-Development", "Software- & DevOps Engineering Best Practices"],
       logo: CourseraImage
     }
     // Drittes Zertifikat auskommentiert oder entfernt für dein Szenario mit nur 2 Zertifikaten
