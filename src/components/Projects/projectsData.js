@@ -57,30 +57,8 @@ export const projectsData = [
       demo: 'https://yourdemo.com',
       // Extended content for project details page
       fullDescription: [
-        'The Predictive Analytics Dashboard is a web-based application that enables business analysts to visualize and interact with machine learning predictions and key performance indicators. The system provides real-time insights into customer behavior, market trends, and business performance.',
-        'The dashboard integrates several machine learning models built with scikit-learn and presents their outputs through an intuitive interface created with React and Plotly. A FastAPI backend serves as the bridge between the frontend and the data processing pipeline.'
-      ],
-      features: [
-        'Interactive visualizations of time-series data and predictions',
-        'Adjustable parameters to explore different prediction scenarios',
-        'Drill-down capabilities from high-level metrics to detailed data points',
-        'Export functionality for reports and presentations',
-        'User authentication and role-based access control',
-        'Mobile-responsive design for accessibility from any device'
-      ],
-      challenges: [
-        {
-          title: 'Real-time Data Updates',
-          description: 'Creating a responsive dashboard that could update data in real-time without frequent page reloads was a significant challenge.',
-          solution: 'Implemented WebSocket connections to push updates from the server to the client as data changes, and used Reacts state management to update visualizations without requiring full page reloads.'
-        },
-        {
-          title: 'Model Explainability',
-          description: 'Machine learning models often function as "black boxes," making it difficult for users to understand why certain predictions were made.',
-          solution: 'Integrated SHAP (SHapley Additive exPlanations) values to provide transparent explanations of model outputs, helping users understand which features contribute most to each prediction.'
-        }
-      ],
-      outcomes: 'The dashboard has become an essential tool for strategic decision-making, with over 200 active users across the organization. It has helped identify several market opportunities and operational inefficiencies, directly contributing to a 15% increase in operational efficiency.'
+        "I'm currently working on this project. Come back soon to see the results!"
+      ]
     },
     {
       id: 3,
