@@ -19,10 +19,10 @@ function BlogSection() {
     },
     {
       id: 2,
-      title: "ETL vs. ELT: Wann ist welcher Ansatz besser?",
-      description: "Ein Vergleich der beiden Data Processing-Paradigmen und wann man welches verwenden sollte.",
-      date: "2. Februar 2024",
-      url: "https://medium.com/@yourusername/etl-vs-elt",
+      title: "Graph Databases & Knowledge Graphs",
+      description: "Powering Recommendation Systems and Advanced Analytics",
+      date: "11. May 2025",
+      url: "https://medium.com/@danielowitch97/graph-databases-knowledge-graphs-powering-recommendation-systems-and-advanced-analytics-2260c69850aa",
       imageUrl: MediumImage2
     }
   ]);
