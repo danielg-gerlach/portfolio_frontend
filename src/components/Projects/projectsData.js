@@ -29,7 +29,7 @@ export const projectsData = [
         'Exploratory data analysis',
         'Data visualizations using Matplotlib & Seaborn'
       ],
-      outcomes: 'In summary, this exploratory data analysis provides a foundation for understanding the basic defect dynamics in the dataset. It highlights areas for potential improvements and sets the foundation for more in-depth analysis and decision-making to enhance quality and efficiency.'
+      outcomes: 'The Energy Supplier Data Modeling Project delivers a relational database tailored to the basic operational needs of an energy supplier company. By designing a normalized schema with relationships and enforcing data integrity through constraints, the project ensures reliable and efficient data management. This implementation not only addresses immediate business challenges but also lays a solid foundation for future growth and adaptability.'
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ export const projectsData = [
       technologies: ['Python', 'SQL', 'BigQuery', 'MySQL', 'Looker Studio'],
       image: portfolioImageETL, 
       github: 'https://github.com/yourusername/analytics-dashboard',
-      demo: 'https://yourdemo.com',
+      demo: null,
       // Extended content for project details page
       fullDescription: [
         "I'm currently working on this project. Come back soon to see the results!"
@@ -83,11 +83,9 @@ export const projectsData = [
       features: [
         "Real-time streaming ingestion of shop-floor sensor data for immediate process visibility.",
         "End-to-end supply-chain analytics that joins IoT, ERP, MES and logistics feeds.",
-        "Embedded quality-assurance metrics with continuous-improvement feedback loops.",
         "Schema-flexible, data-mesh layout that adapts quickly to new products and data structures.",
         "Cloud-native stack (Airbyte → AWS S3 Data Lake → dbt → Snowflake → Power BI) for modular scalability.",
-        "Security-by-design: encryption, IAM-based access control, masking, governance and full audit logging.",
-        "Cost & performance layer: auto-scaling, partitioning, caching and automated data-quality checks."
+        "Ensured data quality loops through cleaning & standardizing data into clean data for further transformation."
       ],
       outcomes: "Designing a resilient data architecture forces me to weigh performance, cost and governance instead of chasing the newest framework. Up-front schema contracts and automated CI/CD tests spare countless downstream fixes and keep stakeholders’ trust. True real-time value emerges only when every data change is treated as an event, not a nightly batch. Long-term scalability hinges less on exotic tech and more on clear domain ownership paired with rich metadata. Starting lean, measuring everything and iterating quickly lets the architecture mature with – not ahead of – the business."
     }
