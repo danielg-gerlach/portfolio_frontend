@@ -2,11 +2,11 @@
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import './ResumeDownload.css';
-import ResumePic from "../../assets/images2/resume/Resume-DG-new.png";
+import ResumePic from "../../assets/images2/resume/Resume.png";
 
 function ResumeDownload() {
   // Google Docs-Link zum Lebenslauf
-  const resumeDocLink = "https://drive.google.com/file/d/1c_ChcFKL2YKL0Ve4qbcx6U81dv2iPrZ0/view?usp=drive_link";
+  const resumeDocLink = "https://drive.google.com/file/d/1Y3S3qh_YmeLHuxFyejbBzscCUYyUvSH4/view?usp=drive_link";
 
   return (
     <section id="resume" className="resume-section">
