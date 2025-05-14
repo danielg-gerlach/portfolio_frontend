@@ -29,7 +29,7 @@ export const projectsData = [
         'Exploratory data analysis',
         'Data visualizations using Matplotlib & Seaborn'
       ],
-      outcomes: 'The Energy Supplier Data Modeling Project delivers a relational database tailored to the basic operational needs of an energy supplier company. By designing a normalized schema with relationships and enforcing data integrity through constraints, the project ensures reliable and efficient data management. This implementation not only addresses immediate business challenges but also lays a solid foundation for future growth and adaptability.'
+      outcomes: 'In summary, this exploratory data analysis provides a foundation for understanding the basic defect dynamics in the dataset. It highlights areas for potential improvements and sets the foundation for more in-depth analysis and decision-making to enhance quality and efficiency.'
     },
     {
       id: 2,
@@ -87,6 +87,6 @@ export const projectsData = [
         "Cloud-native stack (Airbyte → AWS S3 Data Lake → dbt → Snowflake → Power BI) for modular scalability.",
         "Ensured data quality loops through cleaning & standardizing data into clean data for further transformation."
       ],
-      outcomes: "Designing a resilient data architecture forces me to weigh performance, cost and governance instead of chasing the newest framework. Up-front schema contracts and automated CI/CD tests spare countless downstream fixes and keep stakeholders’ trust. True real-time value emerges only when every data change is treated as an event, not a nightly batch. Long-term scalability hinges less on exotic tech and more on clear domain ownership paired with rich metadata. Starting lean, measuring everything and iterating quickly lets the architecture mature with – not ahead of – the business."
+      outcomes: "Designing a resilient data architecture forces me to weigh performance, cost and governance instead of chasing the newest framework. Starting lean, measuring everything and iterating quickly lets the architecture mature with – not ahead of – the business."
     }
   ]
