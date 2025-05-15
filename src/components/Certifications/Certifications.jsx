@@ -23,14 +23,13 @@ function Certifications() {
       id: 2,
       name: "DevOps & Software Engineering",
       issuer: "Coursera",
-      date: "Januar 2024",
+      date: "January 2024",
       expiryDate: null,
       credentialId: "EFGH5678",
       verificationUrl: "https://coursera.org/share/6aa1d04db46bc341e8106735ac5bed65",
       skills: ["Microservices", "Git", "Shell Scripting", "Test-Driven-Development", "Software- & DevOps Engineering Best Practices", "Python & SQL"],
       logo: CourseraImage
     }
-    // Drittes Zertifikat auskommentiert oder entfernt für dein Szenario mit nur 2 Zertifikaten
   ];
 
   // Bestimme die passende Klasse basierend auf der Anzahl der Zertifikate
