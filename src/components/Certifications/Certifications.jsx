@@ -23,7 +23,7 @@ function Certifications() {
       id: 2,
       name: "DevOps & Software Engineering",
       issuer: "Coursera",
-      date: "January 2024",
+      date: "July 2023",
       expiryDate: null,
       credentialId: "EFGH5678",
       verificationUrl: "https://coursera.org/share/6aa1d04db46bc341e8106735ac5bed65",

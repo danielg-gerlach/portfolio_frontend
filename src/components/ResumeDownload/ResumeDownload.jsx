@@ -17,7 +17,7 @@ function ResumeDownload() {
           <div className="resume-content">
             <h3 className="resume-title">My resume for everyone who's interested!</h3>
             <p className="resume-description">
-              My resume is available online in Google Drive.
+              My resume is available online on Google Drive.
               You can view it directly online or download it.
             </p>
             
